@@ -1,7 +1,4 @@
 ---
-import MenuItemContainerView from '../components/MenuItemContainerView.astro';
-import MenuItemView from '../components/MenuItemView.astro';
-import menuItems from '../data/menuItemsData';
 export interface Props {
 	title: string;
 }
@@ -20,23 +17,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<MenuItemContainerView>
-			{menuItems.map((item) => <MenuItemView {... item} />)}
-		<MenuItemContainerView/>
-		<slot/>
+		</main>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>
+
