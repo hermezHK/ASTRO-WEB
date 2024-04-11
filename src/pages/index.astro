@@ -1,14 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Post from "../components/Post.astro";
 ---
 
-<!-- test props -->
-<a href="/">Inicio</a>
-
-<a href="/about/">Sobre mi</a>
-
-<Layout title="SpaceX web">
-  <main>
-    <h1 class="text-6xl text-white font-bold text">SpaceX ☼</h1>
-  </main>
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="{Astro.generator}" />
+    <title>Astro-web</title>
+  </head>
+  <body>
+    <Post title="Cool Title" , description="Super Description" />
+  </body>
+</html>
