@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.5.8",
+    "json-server": "^1.0.0-alpha.23",
     "tailwindcss": "^3.4.1"
   }
 }

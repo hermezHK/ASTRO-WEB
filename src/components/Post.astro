@@ -1,5 +1,7 @@
 ---
-const { title, description } = Astro.props;
+const {
+  post: { title, description, content, created_at },
+} = Astro.props;
 ---
 
 <article
@@ -14,10 +16,9 @@ const { title, description } = Astro.props;
   <h2 class="text-2xl font-bold">{title}</h2>
   <p>{description}</p>
   <p class="text-zinc-300">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the
-    1500s, when an unknown printer took a galley of type and scrambled it to
-    make a type specimen book.
+    {content.slice(0, 100) + "...."}
   </p>
-  <p class="text-zinc-300">11/04/24 - 3 min read</p>
+  <p class="text-zinc-300">
+    {new Date(created_at).toLocaleDateString()}- 3 min read
+  </p>
 </article>
